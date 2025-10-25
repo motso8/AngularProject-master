@@ -1,4 +1,4 @@
-<div class="cart">
+<div  class="cart">
   <h1>Cart</h1>
   <table>
     <thead>
@@ -11,16 +11,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of product">
+      <tr  *ngFor="let item of product">
         <td><img [src]="item.product.image" alt=""></td>
         <td>{{item.product.name}}</td>
-        <td>{{item.product.price}} $</td>
+        <td> <p> {{ (item.quantity ?? 0) * (item.price ?? 0) }}$</p> </td>
         <td>
+
           <button style="background-color: white; color: black; font-size: 20px; cursor: pointer;" (click)="decrease(item)">-</button>
           <span class="quantity">{{item.quantity}}</span>
           <button style="background-color: white; color: black; font-size: 20px; cursor: pointer;" (click)="increase(item)">+</button>
+
         </td>
+
         <td>
+
           <button (click)="deleteItem(item.product.id)">Delete</button>
         </td>
       </tr>

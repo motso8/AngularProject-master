@@ -28,11 +28,14 @@ export class BasketComponent {
   deleteItem(id : number){
     this.api.deleteProduct(id).subscribe(resp1 => {
       console.log("Deleted Item", resp1)
+
     })
 
     Swal.fire({
-    title: 'Product Deleted',
-    timer: 1500
+    title: 'Product Deleted!.  Please refresh the page to see the updated basket',
+showConfirmButton: false,
+    timer: 1500,
+
   });
   }
 
@@ -41,12 +44,12 @@ export class BasketComponent {
       this.route.navigateByUrl("/home")
       Swal.fire({
         icon: 'success',
-        title: 'Product Delivered!',
-        text: 'Your product has been successfully delivered.',
+       title: 'Booking Confirmed!',
+        text : 'Your product has been successfully booked.',
         showConfirmButton: false,
         timer: 2000,
         background: '#d4edda',
-        iconColor: '#28a745',
+        iconColor: '#c5a216',
       });
 
     }
@@ -71,6 +74,7 @@ export class BasketComponent {
     console.log(resp);
     item.quantity = newQuantity;
   })
+
 }
 
 decrease(item : CartItem) {
@@ -94,6 +98,12 @@ decrease(item : CartItem) {
   })
 }
 
+
+cartVisible: boolean = true;
+
+gaqroba() {
+  this.cartVisible = false; // დამალვა
+}
 }
 
 
