@@ -1,0 +1,317 @@
+main{
+  display: flex;
+  justify-content: center;
+  background-image: url(https://restaurant.stepprojects.ge/images/p_bg.jpg);
+
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background-image: url('https://plus.unsplash.com/premium_photo-1661962305366-0c62646fd249?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=60&w=3000');
+  background-size: cover;           /* იწელება ეკრანზე სრულად */
+  background-position: center;      /* ცენტრში აჩენს სურათს */
+  background-repeat: no-repeat;     /* არ იმეორებს */
+  background-attachment: fixed;     /* როცა სქროლავ, სურათი მწყობრად დგას */
+  color: #ffffff;                   /* ტექსტი თეთრი */
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+
+
+
+  aside{
+    width: 230px;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+
+    // input[type="text"]{
+    //   width: 100%;
+    //   padding: 10px;
+    //   border: 1px solid #CFCFCF;
+    //   border-radius: 8px;
+    //   font-size: 16px;
+    //   margin-bottom: 20px;
+    // }
+
+    .asidebox{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: rgba(0, 0, 0, 0.637);
+      border: none;
+      border-radius: 12px;
+
+      padding: 20px;
+      text-align: center;
+      width: 230px;
+     
+
+
+      input[type="range"]{
+        width: 100%;
+        height: 10px;
+        accent-color: #c5a216;
+        background-color: #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        appearance: none;
+      }
+
+      label{
+        font-size: 16px;
+        color: #777;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+    }
+  }
+
+  .parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    width:50%;
+    margin-right: 7%;
+
+    .box{
+      width: 250px;
+       background-color: rgba(0, 0, 0, 0.637);
+      border: none;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 20px;
+      text-align: center;
+ h3{
+  font-size: 19px;
+  color: #c5a216;
+margin-top: 10px;
+  font-weight: bold;
+
+}
+      .data{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      img{
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      h2{
+        font-size: 19px;
+        color: #c5a216;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      p{
+        font-size: 16px;
+        color: #777;
+        margin: 5px 0;
+      }
+
+      &:hover{
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+
+      button {
+  background: #c5a216;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'Poppins', 'Lucida Sans', sans-serif;
+  letter-spacing: 0.5px;
+
+  transition: all 0.4s ease;
+
+
+button:hover {
+  background: linear-gradient(135deg, #ffdb4d, #f9d342);
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(255, 204, 0, 0.6);
+
+
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(255, 204, 0, 0.5);
+
+
+        &:hover{
+          color: rgba(0, 0, 0, 0.689);
+          transition: 0.4s;
+        }
+      }
+
+
+    }
+  }
+}
+  }
+}
+
+
+
+
+.banner {
+  background-image: url('https://plus.unsplash.com/premium_photo-1661962305366-0c62646fd249?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=60&w=3000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 450px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 7%;
+  .category{
+margin: 0;
+  padding: 0;
+  height: auto;
+     /* როცა სქროლავ, სურათი მწყობრად დგას */
+                  /* ტექსტი თეთრი */
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+      background-color: rgba(0, 0, 0, 0.637);
+  width: 100%;
+
+
+
+.nav{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+
+    li{
+      font-size: 21px;
+
+      a{
+        text-decoration: none;
+        color: #f9d342;
+        cursor: pointer;
+
+        &:hover{
+          color: #f9d342;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  .bottom{
+    width: 1150px;
+    margin: auto;
+    height: 6px;
+    // background-image: url(https://restaurant.stepprojects.ge/images/border.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}
+
+h2{
+  font-size: 36px;
+  color: #f9d342;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+}
+}
+
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* მუქი შრე */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+
+h1{
+  font-size: 30px;
+
+  font-weight: 800;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  text-transform: capitalize;
+  color: #f9d342; /* gold-yellow */
+text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  margin-top: 75px;
+}
+
+@media screen and (max-width: 1050px){
+  main{
+    flex-direction: column;
+    align-items: center;
+
+    .parent{
+      .box{
+        img{
+          height: auto;
+        }
+        .container{
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  aside{
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav{
+
+  ul{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+}
+
+@media screen and (max-width: 500px){
+
+  .category{
+
+  h2{
+    font-size: 25px;
+  }
+}
+}
+
+
+.active{
+  border-bottom: 3px solid #f9d342;
+}

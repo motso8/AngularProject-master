@@ -1,0 +1,71 @@
+
+
+<section class="banner">
+
+    <div class="overlay">
+    <h1>Welcome to Our Restaurant</h1>
+</div>
+    <div class="category">
+
+
+    <h2 >Categories</h2>
+    <div class="nav">
+<ul>
+  <li *ngFor="let el of categoriesArr"
+      [ngClass]="{'active': selectedCategoryId == el.id}">
+    <a title="{{el.name}}" (click)="getCategoryId(el.id)">{{el.name}}</a>
+  </li>
+</ul>
+
+
+    <div class="bottom"></div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+  <main>
+
+
+    <aside>
+      <!-- <input placeholder="🔍 Search for delicious dishes..." [(ngModel)]="searchText" (ngModelChange)="search()" type="text"> -->
+      <div class="asidebox">
+        <label>Spiciness: {{rangeValue}}</label>
+        <input type="range" [(ngModel)]="rangeValue" min="0" max="4">
+
+        <label><input style="accent-color: #f9d342;" type="checkbox" [(ngModel)]="Isnuts">Nuts</label>
+
+        <label><input style="accent-color: #f9d342;" type="checkbox" [(ngModel)]="Isvegetarian">No Vegetarian</label>
+
+    <app-button class="button" (click)="reset()" text="Reset"></app-button>
+    <app-button class="button" (click)="filter()" text="Apply Filter"></app-button>
+
+
+      </div>
+    </aside>
+
+<div class="parent">
+  <div class="box" *ngFor="let el of productsArr">
+    <img [src]="el.image" alt="">
+    <div class="data">
+      <h2>{{el.name}}</h2>
+      <p>Spiciness: {{el.spiciness}}</p>
+      <p>Nuts: {{el.nuts ? 'Yes' : 'No'}} | Vegetarian: {{el.vegetarian ? 'Yes' : 'No'}}</p>
+      <div class="container">
+        <h3>$ {{el.price}}</h3>
+        <button (click)="addToCart(el.id, el.price!)">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  </main>
+

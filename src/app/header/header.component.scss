@@ -1,0 +1,109 @@
+header{
+    width: 100%;
+    height: 15vh;
+ background-color: #ddb30c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .logo {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #f9d342;
+}
+
+    nav{
+        width: 30%;
+
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap: 40px;
+            justify-content: end;
+
+            .form{
+                display: flex;
+                gap: 40px;
+                margin-left: 50px;
+            }
+
+            li{
+                font-weight: 700;
+                font-size: 17px;
+
+                i{
+                   color: #000; /* gold-yellow */
+text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+                    margin-right: 5px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #000; /* gold-yellow */
+text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+                }
+            }
+        }
+    }
+}
+
+.bottom{
+    width: 100%;
+    height: 6px;
+    // background-image: url(https://restaurant.stepprojects.ge/images/border.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 105px;
+}
+
+
+@media screen and (max-width: 1050px){
+
+    h1{
+        padding: 10px;
+    }
+
+    i{
+        display: none;
+    }
+
+    header{
+
+        img{
+            display: none;
+        }
+
+        nav{
+            width: 100%;
+            flex-direction: column;
+
+            ul{
+                justify-content: left;
+                gap: 5px;
+                flex-wrap: wrap;
+
+                .form{
+                    gap: 5px;
+                }
+
+                li{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+
+}

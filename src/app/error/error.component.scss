@@ -1,0 +1,45 @@
+.notfound{
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Roboto Slab', serif;
+  background-image: url(https://restaurant.stepprojects.ge/images/p_bg.jpg);
+  background-repeat: no-repeat;
+  color: #444;
+  margin-top: 100px;
+
+  h1{
+    font-size: 128px;
+    margin: 0;
+    color: #e74c3c;
+  }
+
+  h2{
+    font-size: 40px;
+    margin: 10px 0 20px;
+  }
+
+  p{
+    font-size: 19px;    
+    margin-bottom: 30px;
+  }
+
+  .btnhome{
+    padding: 12px 25px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+
+    &:hover{
+      background-color: #c0392b;
+      transition: 0.3s;
+    }
+  }
+}
+
+.act{
+  background-color: red;
+  width: 500px;
+  height: 600px;
+}

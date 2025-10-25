@@ -1,0 +1,15 @@
+<div class="grandfather">
+    <div class="login">
+  <h1>Log In</h1>
+
+  <label>Phone Number</label>
+  <input [(ngModel)]="phoneNumber" type="text" placeholder="Enter your phone number">
+
+  <label>Password</label>
+  <input [(ngModel)]="password" type="password" placeholder="Enter your password">
+
+  <app-button text="Sign Up" (click)="signIn()"></app-button>
+  <a routerLink="/register"><p style="margin-top: 10px;">Don't Have An Account?</p></a>
+</div>
+
+</div>
