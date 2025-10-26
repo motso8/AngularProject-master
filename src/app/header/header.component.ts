@@ -13,14 +13,14 @@ import Swal from 'sweetalert2';
 })
 export class HeaderComponent {
 
-  
-  
+
+
     constructor(private api : ApiService){
-  
+
     }
-  
+
     productsArr : Product[] = []
-    
+
     logout(){
       localStorage.removeItem("token")
       Swal.fire({
@@ -28,4 +28,14 @@ export class HeaderComponent {
       timer: 1500
     });
     }
+     menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
 }

@@ -1,16 +1,29 @@
- <header>
- <img class=".logo" routerLink="/home" src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Restaurant Logo" class="logo">
+<header>
+  <img
+    routerLink="/home"
+    src="https://cdn-icons-png.flaticon.com/512/857/857681.png"
+    alt="Restaurant Logo"
+    class="logo"
+  />
 
-  <nav>
+  <!-- Burger Icon -->
+  <div class="burger-icon" (click)="toggleMenu()">
+    <div class="line" [class.open]="menuOpen"></div>
+    <div class="line" [class.open]="menuOpen"></div>
+    <div class="line" [class.open]="menuOpen"></div>
+  </div>
+
+  <!-- Burger Menu (dropdown) -->
+  <div class="burger-menu" [class.active]="menuOpen">
     <ul>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/basket">Cart</a></li>
+      <li><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/basket" (click)="closeMenu()">Cart</a></li>
       <div class="form">
-      <li><a routerLink="/register">Register</a></li>
-      <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register" (click)="closeMenu()">Register</a></li>
+        <span>/</span>
+        <li><a routerLink="/login" (click)="closeMenu()">Login</a></li>
       </div>
-      <li style="margin-left: 50px;"><a (click)="logout()" routerLink="">Logout</a></li>
+      <li><a (click)="logout(); closeMenu()" routerLink="">Logout</a></li>
     </ul>
-  </nav>
-  <div class="bottom"></div>
+  </div>
 </header>

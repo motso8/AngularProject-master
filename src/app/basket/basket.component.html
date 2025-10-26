@@ -14,7 +14,7 @@
       <tr  *ngFor="let item of product">
         <td><img [src]="item.product.image" alt=""></td>
         <td>{{item.product.name}}</td>
-        <td> <p> {{ (item.quantity ?? 0) * (item.price ?? 0) }}$</p> </td>
+        <td> <p> {{ (item.quantity  ) * (item.price ?? 0) }}$</p> </td>
         <td>
 
           <button style="background-color: white; color: black; font-size: 20px; cursor: pointer;" (click)="decrease(item)">-</button>
